@@ -11,3 +11,11 @@ while n < 11
 	n += 1
 end
 
+# Print 1 - 100 to the screen
+puts "Print 1 - 100 using until loop:"
+i = 1
+until i == 100
+  puts i
+  i += 1
+end
+puts i
