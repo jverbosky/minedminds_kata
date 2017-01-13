@@ -19,3 +19,13 @@ until i == 100
   i += 1
 end
 puts i
+
+# Print 1 - 100 to the screen, but...
+# replace the number 5 with your favorite food
+for num in 1..100
+  if num == 5
+  	puts "hotdog"
+  else
+    puts num
+  end
+end
