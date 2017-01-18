@@ -8,30 +8,44 @@
 # A method will always return the last item
 # So to return 1, can use this:
 
-def minedmindskata(parameter)
-  1
-end
+# def minedmindskata(parameter)
+#   1
+# end
 
 # A method for returning whatever value is
 # passed to the parameter
 
-def minedmindskata(num)
-  num
-end
+# def minedmindskata(num)
+#   num
+# end
 	
 # Method for test 3
 # Conditionally evaluate parameter value
 def minedmindskata(num)
-  if num == 3
-    return "Mined"
-  elsif num == 5
-  	return "Minds"
-  elsif num == 15
+  if num % 15 == 0
   	return "Mined Minds"
+  elsif num % 3 == 0
+    return "Mined"
+  elsif num % 5 == 0
+  	return "Minds"
   else
-    return num
+    num
   end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # # Need to call ("values") or return ("return values")
 # # Using "print values" or "puts values" will error on test

@@ -42,7 +42,17 @@ class TestMinedMindsKata < Minitest::Test
 		assert_equal("Mined Minds",minedmindskata(15))
 	end
 
+	def test_function_returns_69
+		assert_equal("Mined",minedmindskata(69))
+	end
 
+	def test_function_returns_85
+		assert_equal("Minds",minedmindskata(85))
+	end
+
+	def test_function_returns_75
+		assert_equal("Mined Minds",minedmindskata(75))
+	end
 
 	# # Can use arrays to test ranges
 	# def test_function_returns_array
