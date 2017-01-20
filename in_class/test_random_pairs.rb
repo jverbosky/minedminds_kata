@@ -37,4 +37,9 @@ class TestMinedMindsKata < Minitest::Test
 		assert_equal(2, pairs.count)
 	end
 
+	def test_random_pair_has_3_with_7_naes
+		pairs = random_pair(["josh","john","susan","bob","steve","jon","caleb"])
+		assert_equal(3, pairs.count)
+	end
+
 end

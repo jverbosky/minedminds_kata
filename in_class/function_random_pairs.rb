@@ -1,4 +1,4 @@
-# In-class example of random pairs
+# In-class example of random pairs (Josh)
 
 def random_pair(names)
 	my_array = []
