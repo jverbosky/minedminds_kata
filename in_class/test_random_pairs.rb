@@ -32,12 +32,12 @@ class TestMinedMindsKata < Minitest::Test
 	# Passes but actually false positive
 	# Output of multi-dimensional array only contains 2 pairs (4 names)
 	# Last name got dropped due to .each do / if loop not having an else condition
-	def test_random_pair_has_2_with_5_naes
+	def test_random_pair_has_2_with_5_names
 		pairs = random_pair(["josh","john","susan","bob","steve"])
 		assert_equal(2, pairs.count)
 	end
 
-	def test_random_pair_has_3_with_7_naes
+	def test_random_pair_has_3_with_7_names
 		pairs = random_pair(["josh","john","susan","bob","steve","jon","caleb"])
 		assert_equal(3, pairs.count)
 	end
