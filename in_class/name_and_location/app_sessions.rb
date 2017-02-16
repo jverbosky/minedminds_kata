@@ -94,8 +94,25 @@ post '/post_name' do
 end
 
 post '/post_location' do
-  # no longer need to use a "backend_name = params[:user_name]" statement thanks to session
+  # no longer need to use a "backend_name = params[:user_name_again]" statement thanks to session
   backend_location = params[:user_location]
   # now able to access passed value via session
   "Your name is #{session[:backend_name]} and your location is #{backend_location}."
 end
+
+# For ease of implementation:
+#
+# 1) In get_name.erb, change "post_name" (line 3) and "user_name" (line 4) to "name"
+# 2) In get_location.erb, change "post_location" (line 3) and "user_location" (line 4) to "location"
+# 3) In get_location.erb, change "user_name_again" to "name" (line 6)
+# 4) Replace the previous post routes with these:
+#
+# post '/name' do
+#   session[:name] = params[:name]
+#   erb :get_location, :locals => {:name => session[:name]}
+# end
+
+# post '/location' do
+#   location = params[:location]
+#   "Your name is #{session[:name]} and your location is #{location}."
+# end

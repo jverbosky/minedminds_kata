@@ -75,7 +75,7 @@
 #
 #      <form action = "post_location" method = "post">
 #        <input type = "text" name = "some_other_variable">
-#        <input type = "text" name = "some_variable" value = <%= view_variable %> hidden>
+#        <input type = "text" name = "some_variable_again" value = <%= view_variable %> hidden>
 #        <input type = "submit">
 #      </form>
 #
@@ -125,8 +125,31 @@ end
 post '/post_location' do
   # need to call passed local variable to access value in this route
   # variable doesn't have to be the same as what is used in the "passing" route
-  backend_name_3 = params[:user_name]
+  backend_name_3 = params[:user_name_again]
   backend_location = params[:user_location]
   # just make sure to use the same variable names consistently in the route
   "Your name is #{backend_name_3} and your location is #{backend_location}."
 end
+
+# For ease of implementation:
+#
+# 1) In get_name.erb, change "post_name" (line 3) and "user_name" (line 4) to "name"
+# 2) In get_location.erb, change "post_location" (line 3) and "user_location" (line 4) to "location"
+# 3) In get_location.erb, change "user_name_again" to "name" (line 6)
+# 4) Replace the previous post routes (and second get route) with these:
+#
+# post '/name' do
+#   name = params[:name]
+#   redirect "/location?name=" + name
+# end
+
+# get '/location' do
+#   name = params[:name]
+#   erb :get_location, :locals => {:name => name}
+# end
+
+# post '/location' do
+#   name = params[:name]
+#   location = params[:location]
+#   "Your name is #{name} and your location is #{location}."
+# end
