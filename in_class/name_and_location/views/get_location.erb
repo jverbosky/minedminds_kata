@@ -1,0 +1,8 @@
+<%= name %>, what is your location?
+
+<form action = "post_location" method = "post">
+	<input type = "text" name = "user_location">
+	<!-- trick to getting the name using hidden field on input -->
+	<input type = "text" name = "user_name" value = <%= name %> hidden>
+	<input type = "submit">
+</form>
