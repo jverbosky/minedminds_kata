@@ -19,7 +19,7 @@
 #
 #      enable :sessions
 #########################################################################################
-# 1) First, collect a value from a get route (ex: get "/" do) with
+# 1) First, collect a value from a get route (ex: get '/' do) with
 #    a view form (ex: get_name.erb) that uses the post method:
 #
 #      <form action = "post_name" method = "post">
@@ -49,7 +49,7 @@
 # 4) In the target view (ex: get_location), use another view form (ex: get_location.erb)
 #    that uses the post method and include an input type with a value of "<%= view_variable %>"
 #    and make it hidden (last parameter - might need to make this the type if doesn't work)
-#    to pass the view_variable value to the next post route (ex: post /post_location do):
+#    to pass the view_variable value to the next post route (ex: post '/post_location' do):
 #
 #      <form action = "post_location" method = "post">
 #        <input type = "text" name = "some_other_variable">
@@ -65,11 +65,11 @@
 #
 #      The value of session[:session_variable] is: <%= view_variable %>
 #########################################################################################
-# 5) In the next post route (ex: post /post_location do), can now access the value directly
+# 5) In the next post route (ex: post '/post_location' do), can now access the value directly
 #    via "session[:session_variable]" - without another "variable = params[:n]" statement
 #
 #    At this point, we could continue passing it to another view or we can simply output
-#    the value (ex: post /post_name do) using string interpolation:
+#    the value (ex: post '/post_name' do) using string interpolation:
 #
 #      "The first value (some_value/session_variable) collected is #{session[:session_variable]}."
 #########################################################################################
