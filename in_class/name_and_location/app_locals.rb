@@ -3,6 +3,9 @@
 #########################################################################################
 #                                       Overview                                        #
 #########################################################################################
+# Path for value:
+#  get route > view (collect value) > post route (pass value) > view (pass value) > post route
+#########################################################################################
 # 1) A "get" route uses a view (webpage #1) with a post form to collect a value from a user
 # 2) The value is collected in a "post" route and assigned to a local variable
 # 3) The local variable is passed to another view (webpage #2) via a view variable
