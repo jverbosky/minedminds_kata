@@ -24,7 +24,7 @@
 #
 #      some_hash = {key => value}
 #
-#    In the event that there are multiple variables to pass, comma separate each pair
+#    In the event that there are multiple variables to pass, comma separate each pair:
 #
 #      some_hash = {key1 => value1, key2 => value2, key3 => value3}
 #########################################################################################
