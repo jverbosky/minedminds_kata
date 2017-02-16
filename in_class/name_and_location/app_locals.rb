@@ -1,6 +1,16 @@
 #########################################################################################
 # Demo of passing collected post data from one route (ex: /post_name) to another (ex: /post_location)
 #########################################################################################
+#                                       Overview                                        #
+#########################################################################################
+# 1) A "get" route uses a view (webpage #1) with a post form to collect a value from a user
+# 2) The value is collected in a "post" route and assigned to a local variable
+# 3) The local variable is passed to another view (webpage #2) via a view variable
+# 4) In the target view (webpage #2), another post form is used to pass the value along
+# 5) A different "post" route is then able to access the value collected in step 1
+#########################################################################################
+#                                        Details                                        #
+#########################################################################################
 # 1) First, collect a value from a get route (ex: get "/" do) with
 #    a view form (ex: get_name.erb) that uses the post method:
 #
