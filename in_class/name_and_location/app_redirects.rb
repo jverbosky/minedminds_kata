@@ -9,12 +9,14 @@ end
 
 post '/post_name' do
   backend_name = params[:user_name]
-  redirect "/get_location?name=" + backend_name  # have to redirect to a get, won't work for post
+  # have to redirect to a get, won't work for post
+  # ex URL:  http://localhost:4567/location?name=John
+  redirect "/location?name=" + backend_name
 end
 
-get '/post_location' do
-  backend_name = params[:name]
-  erb :get_location, :locals => {:name => backend_name}
+get '/location' do  # name must match the name used in the redirect (before the "?")
+  backend_name_2 = params[:name]  # need to call the passed local variable to access value in this route
+  erb :get_location, :locals => {:name => backend_name_2}
 end
 
 post '/post_location' do

@@ -69,6 +69,13 @@
 #    the value (ex: post /post_name do) using string interpolation:
 #
 #      "The first value (some_value/local_variable) collected is #{local_variable}."
+#
+#    Note that the local variable name does not have to use the same name as in the earlier
+#    route - using something else will work fine, as there is no relationship with the
+#    local variable in the earlier route:
+#
+#      original_value = params[:some_variable]
+#      "The first value collected is #{original_value}."
 #########################################################################################
 
 require 'sinatra'
@@ -89,7 +96,10 @@ post '/post_name' do
 end
 
 post '/post_location' do
-  backend_name = params[:user_name]  # need to call passed local variable to access value in this route
+  # need to call passed local variable to access value in this route
+  # variable doesn't have to be the same as what is used in the "passing" route
+  backend_name_2 = params[:user_name]
   backend_location = params[:user_location]
-  "Your name is #{backend_name} and your location is #{backend_location}."  # now able to access passed value
+  # just make sure to use the same variable names consistently in the route
+  "Your name is #{backend_name_2} and your location is #{backend_location}."  # now able to access passed value
 end
