@@ -33,15 +33,15 @@ class TestCoinChanger < Minitest::Test
     assert_equal({nickel: 1, penny: 2}, result)
   end
 
-  # def test_6_
-  #   result = 
-  #   assert_equal(  ,  )
-  # end
+  def test_6_pass_ten_cents_returns_hash_with_one_dime
+    result = get_change(10)
+    assert_equal({dime: 1}, result)
+  end
 
-  # def test_7_
-  #   result = 
-  #   assert_equal(  ,  )
-  # end
+  def test_7_pass_eleven_cents_returns_hash_with_one_dime_and_one_penny
+    result = get_change(11)
+    assert_equal({dime: 1, penny: 1}, result)
+  end
 
 
 
