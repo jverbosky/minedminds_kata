@@ -43,6 +43,9 @@ class TestCoinChanger < Minitest::Test
     assert_equal({dime: 1, penny: 1}, result)
   end
 
-
+  def test_8_pass_twenty_cents_returns_hash_with_two_dimes
+    result = get_change(20)
+    assert_equal({dime: 2}, result)
+  end
 
 end
