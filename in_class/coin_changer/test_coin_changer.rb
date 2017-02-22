@@ -48,4 +48,18 @@ class TestCoinChanger < Minitest::Test
     assert_equal({dime: 2}, result)
   end
 
+  def test_9_pass_25_cents_returns_hash_with_one_quarter
+    result = get_change(25)
+    assert_equal({quarter: 1}, result)
+  end
+
+  def test_10_pass_50_cents_returns_hash_with_two_quarters
+    result = get_change(50)
+    assert_equal({quarter: 2}, result)
+  end
+
+  def test_11_pass_93_cents_returns_hash_with_three_quarters_1_dime_1_nickel_3_penny
+    result = get_change(93)
+    assert_equal({quarter: 3, dime: 1, nickel: 1, penny: 3}, result)
+  end
 end

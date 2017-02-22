@@ -1,5 +1,10 @@
 def get_change(amount)
   change = {}
+  if amount >= 25
+    number_coins = amount / 25
+    change[:quarter] = number_coins
+    amount -= 25 * number_coins
+  end
   if amount >= 10
     number_coins = amount / 10
     change[:dime] = number_coins
