@@ -9,7 +9,7 @@ class Dog
     @sound = "woof"
   end
 
-  def get_info()
+  def to_s()
     return "#{@name} says #{@sound}."
   end
 

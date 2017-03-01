@@ -37,8 +37,9 @@ class TestAnimalSounds < Minitest::Test
     assert_equal("konkon", animal.sound)
   end
 
-  # Every class should have a "to_string" method
-  # Take this class and ouput a string
+  # Every class should have a "to_string" method (get_info)
+  # Take this class and ouput a string - used to return value of variables in class
+  # See example in display_info.rb
   def test_7_test_for_cat_info
     animal = Cat.new("Buttons")
     assert_equal("Buttons says meow.", animal.get_info())

@@ -7,4 +7,15 @@ animal_one = Cat.new("Mittens")
 animal_two = Dog.new("Shadow")
 animal_three = Fox.new("Flash")
 
-puts animal_one.get_info + " " + animal_two.get_info + " " + animal_three.get_info
+animals = [animal_one, animal_two, animal_three]
+
+puts animal_one.to_s + " " + animal_two.to_s + " " + animal_three.to_s
+
+p animals  # gives instance information
+
+animals.each { |animal| puts animal.to_s }
+
+# Per Max:
+# used .to_s (special method name) and it prints out the "to string"
+# previously used .get_info and just printed memory info instead of "to string"
+print animal_one

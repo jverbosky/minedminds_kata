@@ -9,7 +9,7 @@ class Cat
     @sound = "meow"
   end
 
-  def get_info()
+  def to_s()
     return "#{@name} says #{@sound}."
   end
 
