@@ -9,4 +9,8 @@ class Dog
     @sound = "woof"
   end
 
+  def get_info()
+    return "#{@name} says #{@sound}."
+  end
+
 end

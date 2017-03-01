@@ -5,6 +5,8 @@ require_relative "fox.rb"
 
 class TestAnimalSounds < Minitest::Test
 
+  # A class instance is only available within a method that calls it
+  # At the end of the method, the class instance is destroyed
   def test_1_test_for_cat_name
     animal = Cat.new("Felix")
     assert_equal("Felix", animal.name)
@@ -33,6 +35,23 @@ class TestAnimalSounds < Minitest::Test
   def test_6_test_for_fox_sound
     animal = Fox.new("Todd")
     assert_equal("konkon", animal.sound)
+  end
+
+  # Every class should have a "to_string" method
+  # Take this class and ouput a string
+  def test_7_test_for_cat_info
+    animal = Cat.new("Buttons")
+    assert_equal("Buttons says meow.", animal.get_info())
+  end
+
+  def test_8_test_for_dog_info
+    animal = Dog.new("Dog")
+    assert_equal("Dog says woof.", animal.get_info())
+  end
+
+  def test_9_test_for_fox_info
+    animal = Fox.new("Arctic")
+    assert_equal("Arctic says konkon.", animal.get_info())
   end
 
 end
