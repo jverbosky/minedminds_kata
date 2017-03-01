@@ -1,4 +1,4 @@
-class Cat
+class Fox
 
   # Method to get the name back (getters & setters in other languages)
   attr_reader :name, :sound
@@ -6,7 +6,7 @@ class Cat
   def initialize(name)
     # use instance variable if not resetting the value anywhere else
     @name = name
-    @sound = "meow"
+    @sound = "konkon"
   end
 
 end
