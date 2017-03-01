@@ -8,4 +8,9 @@ class TestAnimalSounds < Minitest::Test
     assert_equal("Felix", animal.name)
   end
 
+  def test_2_test_for_cat_sound
+    animal = Cat.new("Midnight")
+    assert_equal("meow", animal.sound)
+  end
+
 end
